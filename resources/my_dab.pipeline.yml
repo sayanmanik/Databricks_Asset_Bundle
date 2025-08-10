@@ -1,0 +1,14 @@
+# The main pipeline for my_dab
+resources:
+  pipelines:
+    my_dab_pipeline:
+      name: my_dab_pipeline
+      catalog: workspace
+      schema: my_dab_${bundle.target}
+      serverless: true
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: ${workspace.file_path}/src

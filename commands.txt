@@ -1,0 +1,23 @@
+pip install databricks-cli
+
+databricks --version
+
+winget install databricks.DatabricksCLI
+
+databricks configure --host <Hostname> --token
+
+databricks clusters list
+
+databricks bundle
+
+databricks bundle init
+
+databricks bundle validate -t dev
+
+databricks bundle validate -t prod
+
+pip install uv
+
+databricks bundle deploy -t dev
+
+databricks bundle run my_dab_job -t dev
